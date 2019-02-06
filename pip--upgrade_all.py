@@ -17,7 +17,7 @@ for i in pipl:
 pipl = pipl[start:]
 
 # Strips away version numbers, And leaves us with desired list of packages
-piplist = [pipl[x] for x in range(len(pipl)-1) if x % 2 == 0]
+pipl = [pipl[x] for x in range(len(pipl)-1) if x % 2 == 0]
 
 
 def upgrade():
