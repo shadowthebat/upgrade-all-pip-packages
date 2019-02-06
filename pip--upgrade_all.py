@@ -1,10 +1,8 @@
 import os
-'''
-First create txt file of the result of calling pip list
-Instructions:
-    $ pip list > piplist.txt
 
-'''
+# Creates text file of the result of calling pip list
+os.system(f'pip list > piplist.txt')
+
 # Read the file
 with open('piplist.txt', 'r+') as f:
     pipl = f.read()
@@ -24,7 +22,7 @@ piplist = [pipl[x] for x in range(len(pipl)-1) if x % 2 == 0]
 
 def upgrade():
     # THE MAGIC: upgrades all packages
-    for i in pipl[start:end]:
+    for i in pipl:
         os.system(f'pip install --upgrade {i}')
 
 
